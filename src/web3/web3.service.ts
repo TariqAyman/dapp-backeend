@@ -19,15 +19,16 @@ export class Web3Service {
   }
 
   async storeMessage(walletAddress: string, message: string) {
-    const signer = await this.provider.getSigner(walletAddress);
-    const contractWithSigner = this.contract.connect(signer);
-    const tx = await contractWithSigner.storeMessage(message);
-    await tx.wait();
+    // const signer = await this.provider.getSigner(walletAddress);
+    // const contractWithSigner = this.contract.connect(signer);
+    // const tx = await contractWithSigner.storeMessage(message);
+    // await tx.wait();
   }
 
   async getMessage(walletAddress: string): Promise<string> {
-    const signer = await this.provider.getSigner(walletAddress);
-    const contractWithSigner = this.contract.connect(signer);
-    return contractWithSigner.getMessage();
+    // const signer = await this.provider.getSigner(walletAddress);
+    // const contractWithSigner = this.contract.connect(signer);
+    // return contractWithSigner.getMessage();
+    return 'Hello, World!';
   }
 }
